@@ -1,0 +1,16 @@
+version: '3'
+services: 
+    caddy:
+      image: alpine-caddy
+      container_name: alpine-caddy
+      restart: always
+      ports: 
+       - "80:80"
+       - "443:443"
+      volumes: 
+       - caddy-file:/etc/caddy
+       - caddylog:
+      command: caddy -conf /etc/caddy/Caddyfile
+volumes: 
+  caddy-file:
+  caddylog:
