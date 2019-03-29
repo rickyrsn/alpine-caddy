@@ -7,10 +7,7 @@ services:
       ports: 
        - "80:80"
        - "443:443"
+       - "2015:2015"
       volumes: 
-       - caddy-file:/etc/caddy
-       - caddylog:
+       - .:/etc/caddy/
       command: caddy -conf /etc/caddy/Caddyfile
-volumes: 
-  caddy-file:
-  caddylog:
