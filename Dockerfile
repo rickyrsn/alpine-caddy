@@ -1,5 +1,4 @@
 FROM alpine:latest
-LABEL maintainer "Muhammad Fahrizal Rahman m[dot]fahrizal[at]orami[dot]com"
 RUN apk update
 
 # System dependencies
